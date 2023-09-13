@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const filterButtons = document.querySelectorAll(".filter-button");
     const cardContainers = document.querySelectorAll(".card-container .card");
 
-    // Función para filtrar las tarjetas según la categoría
+    
     function filterCards(category) {
         cardContainers.forEach((card) => {
             card.style.display = "none";
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // Escucha el evento de clic en los botones de filtro
+    
     filterButtons.forEach((button) => {
         button.addEventListener("click", function () {
             const category = this.id;
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // Función para buscar libros por nombre
+   
     function searchBooks() {
         const searchTerm = searchInput.value.toLowerCase();
         cardContainers.forEach((card) => {
@@ -34,10 +34,10 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // Escucha el evento de clic en el botón de búsqueda
+    
     document.querySelector(".search-results button").addEventListener("click", searchBooks);
 
-    // Escucha el evento de entrada en el campo de búsqueda
+    
     searchInput.addEventListener("input", searchBooks);
 });
 
@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    // Función para mostrar tarjetas basadas en la categoría seleccionada
+    
     function filtrarTarjetasPorCategoria(categoria) {
         cards.forEach(card => {
             if (categoria === null || card.id === categoria) {
@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    // Agrega un manejador de clic a cada botón
+    
     filterButtons.forEach(button => {
         button.addEventListener('click', () => {
             const category = button.getAttribute('data-category');
@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    // Mostrar todas las tarjetas al cargar la página
+    
     mostrarTodasLasTarjetas();
 });
 
