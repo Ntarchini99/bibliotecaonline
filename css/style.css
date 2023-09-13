@@ -58,10 +58,10 @@ header {
   .search-results button i {
     font-size: 20px;
   }
-
+  
   .social-links {
     display: flex;
-    gap: 15px;
+    gap: 30px;
   }
   
   .social-links a {
@@ -72,6 +72,52 @@ header {
     font-size: 24px;
   }
   
+/* Estilos para la barra lateral */
+.sidebar {
+    background-color: #007BFF;
+    color: #fff;
+    width: 200px;
+    max-height: 80vh; 
+    position: fixed;
+    top: 30%;
+    left: 0;
+    overflow-y: auto;
+}
+
+.sidebar .logo {
+    padding: 20px;
+    text-align: center;
+    background-color: #0056b3;
+}
+
+.sidebar .logo h2 {
+    margin: 0;
+}
+
+.sidebar .options {
+    padding: 20px;
+    text-align: center;
+}
+
+.sidebar .options h3 {
+    margin: 0 0 10px;
+}
+
+.sidebar .filter-button {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    padding: 10px 15px;
+    margin: 5px 0;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.sidebar .filter-button:hover {
+    background-color: #0056b3;
+}
 
 /* Estilos para el contenido principal */
 .content {
@@ -83,19 +129,20 @@ header {
 .card-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 1200px; 
-    margin: 0 auto; 
+    justify-content: flex-start; /* Cambiar de space-between a flex-start */
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .card {
-    flex-basis: calc(25% - 20px); 
+    flex-basis: calc(25% - 20px);
     margin: 10px;
     padding: 20px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     transition: transform 0.2s ease-in-out;
+    box-sizing: border-box; /* Añadir esta propiedad para que el padding y el margen se incluyan en el tamaño total */
 }
 
 .card:hover {
@@ -124,8 +171,9 @@ header {
 }
 
 .card a:hover {
-    background-color: #0056b3; 
+    background-color: #0056b3;
 }
+
 
 footer {
     margin-top: auto;
@@ -143,7 +191,139 @@ footer {
     margin-right: 10px; 
 }
 
+/* RESPONSIVE */
 
+/* Estilos para todas las medidas móviles */
+@media (max-width: 768px) {
+    header {
+        background-color: #FFD1DA;
+        color: #000;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        padding: 10px;
+        text-align: center;
+      }
+      
+      .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .logox img {
+        max-width: 100%;
+      }
+      
+      /* Estilos para la barra de búsqueda */
+      .search-results {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .search-results input[type="text"] {
+        padding: 10px;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        width: 100%;
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+      
+      .search-results button {
+        margin-left: 0;
+      }
+      
+      /* Estilos para los enlaces sociales */
+      .social-links {
+        flex-direction: row;
+        justify-content: center;
+      }
+      
+      .social-links a {
+        text-decoration: none;
+      }
+      
+      /* Estilos para la barra lateral */
+      .sidebar {
+        background-color: #007BFF;
+        color: #fff;
+        width: 100%;
+        max-height: none;
+        position: static;
+        top: auto;
+        left: auto;
+        overflow-y: auto;
+      }
+      
+      .sidebar .logo {
+        padding: 20px;
+        text-align: center;
+        background-color: #0056b3;
+      }
+      
+      .sidebar .logo h2 {
+        margin: 0;
+      }
+      
+      .sidebar .options {
+        padding: 20px;
+        text-align: center;
+      }
+      
+      .sidebar .options h3 {
+        margin: 0 0 10px;
+      }
+      
+      .sidebar .filter-button {
+        width: auto;
+      }
+      
+      /* Estilos para el contenido principal */
+      .content {
+        margin-left: 0;
+        padding: 20px;
+      }
+      
+      .card-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 100%;
+      }
+      
+      .card {
+        flex-basis: 100%;
+        margin: 10px 0;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        transition: transform 0.2s ease-in-out;
+        box-sizing: border-box;
+      }
+      
+      .card img {
+        max-width: 100%;
+        height: auto;
+      }
+      
+      .card a {
+        text-align: center;
+      }
+      
+      /* Estilos para el pie de página */
+      footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+      }
+      
+      .parrafo-footer {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+    }
+  
 
 
 

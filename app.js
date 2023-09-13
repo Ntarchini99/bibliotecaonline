@@ -41,6 +41,41 @@ document.addEventListener("DOMContentLoaded", function () {
     searchInput.addEventListener("input", searchBooks);
 });
 
+// SIDEBAR 
 
+document.addEventListener("DOMContentLoaded", function() {
+    // Obtén una referencia a los botones de filtro
+    const filterButtons = document.querySelectorAll('.filter-button');
+    const cards = document.querySelectorAll('.card');
+
+    // Función para mostrar todas las tarjetas
+    function mostrarTodasLasTarjetas() {
+        cards.forEach(card => {
+            card.style.display = 'block';
+        });
+    }
+
+    // Función para mostrar tarjetas basadas en la categoría seleccionada
+    function filtrarTarjetasPorCategoria(categoria) {
+        cards.forEach(card => {
+            if (categoria === null || card.id === categoria) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+
+    // Agrega un manejador de clic a cada botón
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const category = button.getAttribute('data-category');
+            filtrarTarjetasPorCategoria(category);
+        });
+    });
+
+    // Mostrar todas las tarjetas al cargar la página
+    mostrarTodasLasTarjetas();
+});
 
 
