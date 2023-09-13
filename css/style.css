@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #FFD1DA; 
+    color: #000;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    padding: 10px 0;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  
+  .logox img {
+    max-width: 200px;
+  }
+  
+.search-results {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+  }
+  
+  .search-results input[type="text"] {
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+    font-size: 16px;
+    outline: none;
+  }
+  
+  .search-results button {
+    background-color: #007bff; 
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+  .search-results button i {
+    font-size: 20px;
+  }
+
+  .social-links {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .social-links a {
+    text-decoration: none;
+  }
+  
+  .social-links i {
+    font-size: 24px;
+  }
+  
+
+/* Estilos para el contenido principal */
+.content {
+    margin-left: 200px;
+    padding: 20px;
+}
+
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+.card {
+    flex-basis: calc(25% - 20px); 
+    margin: 10px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.card h2 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.card a {
+    display: block;
+    text-align: center;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.card a:hover {
+    background-color: #0056b3; 
+}
+
+footer {
+    margin-top: auto;
+    background-color: #FFD1DA; 
+    color: #000;
+    text-align: center; 
+    padding: 20px 0; 
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.parrafo-footer {
+    font-size: 16px; 
+    margin-right: 10px; 
+}
+
+
+
+
+
